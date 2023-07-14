@@ -1,0 +1,38 @@
+<div class="container" >
+<mat-toolbar color="primary">
+  <span class="spacer"></span>
+  <mat-button-toggle-group  >
+    <mat-button-toggle  style="margin-right: 20px;" routerLink="/" routerLinkActive="active">Home</mat-button-toggle>
+    <mat-button-toggle  style="margin-right: 20px;"routerLink="/login" routerLinkActive="active">Login</mat-button-toggle>
+    <mat-button-toggle  style="margin-right: 20px;"routerLink="/register" routerLinkActive="active">Register</mat-button-toggle>
+    <mat-button-toggle (click)="openAboutUsDialog()" routerLinkActive="active">About Us</mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+
+<ng-template #aboutUsDialog>
+  <mat-card class="about-us-card">
+    <mat-card-header>
+      <mat-card-title style="font-family:'Times New Roman', Times, serif; font-weight: bolder; font-size:xx-large;">About Us</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>We are a team of experts dedicated to helping businesses achieve their goals through accurate sales predictions and data-driven insights. With our application, you can leverage advanced analytics and visualization tools to unlock valuable information from your sales data. Our customizable prediction models allow you to tailor the forecasting process to match your specific business needs. Get started today and take your sales strategies to the next level.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="closeAboutUsDialog()" style="font-weight: bolder;">Close</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+
+
+
+<div class="footer" style="font-family: 'Arial Narrow', Arial, sans-serif; font-weight:bold; align-items: centre;">
+  <p>&copy; 2023 Your Company. All rights reserved.</p>
+  <p>Contact: query@salesexpert.com | Address: No.9, Anna Nagar, Chennai.</p>
+</div>
+

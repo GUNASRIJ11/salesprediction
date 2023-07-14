@@ -1,0 +1,15 @@
+{
+  "targets": {
+    "sales-pred": {
+      "hosting": {
+        "client": [
+          "sales-pred"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sales-pred"
+  }
+}
+
